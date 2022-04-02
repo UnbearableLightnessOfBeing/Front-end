@@ -17,8 +17,21 @@ p {
   --box-shadow-1: 10px 20px 15px rgba(0,0,0,0.5);
   --box-shadow-2: 0 0 100px rgba(247, 0, 255, 0.8);
   --color-border: rgb(247, 0, 255);
-  --color-bg-text: #424542
-;
+  --color-bg-text: #424542;
+  --color-white: #FFFFFF;
+  --color-bgd-blogs: black;
+  --color-pseudo-border: #5e635e;
+}
+
+.light-mode {
+  --color-primary: #FFFFFF;
+  --color-secondary: #ff89b9;
+  --box-shadow-1: 10px 20px 15px rgba(0,0,0,0.5);
+  --box-shadow-2: 0 0 100px rgba(0, 23, 255, 0.8);
+  --color-border: #0017ff;
+  --color-bg-text: #d8d8d8;
+  --color-white: #000000;
+  --color-bgd-blogs: white;
 }
 
 .quote {
@@ -31,7 +44,7 @@ p {
 body {
   background-color: var(--color-primary);
   font-family: 'Poppins', sans-serif;
-  color: white;
+  color: var(--color-white);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
 }
@@ -47,7 +60,6 @@ a {
 
 header {
   height: 10vh;
-  color: white;
   overflow: hidden;
 }
 
@@ -72,7 +84,6 @@ section {
           transform: translateY(-100%) scale(0);
   -webkit-transition: all 0.5s ease-in-out;
   transition: all 0.5s ease-in-out;
-  background-color: var(--color-primary);
 }
 
 .sec1 {
@@ -109,8 +120,8 @@ section {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-animation: scaleAnim 0.6s, ease-in-out;
-          animation: scaleAnim 0.6s, ease-in-out;
+  -webkit-animation: scaleAnim 0.6s, ease-in-out forwards;
+          animation: scaleAnim 0.6s, ease-in-out forwards;
 }
 
 @-webkit-keyframes scaleAnim {
@@ -144,6 +155,12 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
   top: 15%;
   left: 27%;
   height: 10vh;
@@ -155,7 +172,7 @@ section {
 }
 
 .controls .active-btn i {
-  color: white !important;
+  color: var(--color-white) !important;
 }
 
 .controls .control {
@@ -167,8 +184,9 @@ section {
           justify-content: center;
   margin: 0.7rem;
   padding: 0.7rem;
-  background-color: grey;
+  background-color: var(--color-bg-text);
   border-radius: 1cm;
+  border: 1px solid var(--color-white);
   cursor: pointer;
   -webkit-transition: all 0.2s ease-in-out;
   transition: all 0.2s ease-in-out;
@@ -180,6 +198,44 @@ section {
 .controls .control img {
   font-size: 1.5rem;
   color: lightgray;
+  pointer-events: none;
+}
+
+.theme-btn {
+  position: fixed;
+  top: 0%;
+  left: 13.5%;
+  padding: 1rem;
+  cursor: pointer;
+  background-color: var(--color-bg-text);
+  width: 55px;
+  height: 55px;
+  border-radius: 50%;
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: center;
+      -ms-flex-pack: center;
+          justify-content: center;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+  margin: 0.7rem 0;
+  -webkit-box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+          box-shadow: 0 3px 15px rgba(0, 0, 0, 0.3);
+  z-index: 10;
+  -webkit-transition: all 0.05s ease-in-out;
+  transition: all 0.05s ease-in-out;
+}
+
+.theme-btn:active {
+  -webkit-transform: translateY(-3px);
+          transform: translateY(-3px);
+}
+
+.theme-btn i {
+  font-size: 1.5rem;
+  color: grey;
   pointer-events: none;
 }
 
@@ -203,26 +259,18 @@ section {
 .sect-header .header-left-img {
   height: 100%;
   width: 20%;
+  margin-left: 1rem;
+  margin-top: 1rem;
 }
 
 .sect-header #home-hdr-left-img {
   display: -webkit-box;
   display: -ms-flexbox;
   display: flex;
-  -webkit-box-pack: center;
-      -ms-flex-pack: center;
-          justify-content: center;
-  -webkit-box-align: center;
-      -ms-flex-align: center;
-          align-items: center;
 }
 
 .sect-header #home-hdr-left-img img {
-  -webkit-transform: scaleX(-1);
-          transform: scaleX(-1);
   height: 100%;
-  -webkit-transform: translateY(15%);
-          transform: translateY(15%);
   border-radius: 0.5cm;
 }
 
@@ -381,7 +429,7 @@ section {
 .about-container .about-anime .anime-pointer {
   font-size: 7.5rem;
   margin-left: 1rem;
-  background-color: white;
+  background-color: var(--color-white);
   color: var(--color-secondary);
   border-radius: 55%;
   height: 7.5rem;
@@ -419,7 +467,7 @@ section {
   -webkit-box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.32);
           box-shadow: 1px 2px 15px rgba(0, 0, 0, 0.32);
   background-color: var(--color-secondary);
-  color: white;
+  color: var(--color-white);
 }
 
 .about-container .about-anime .anime-list-link {
@@ -568,6 +616,23 @@ section {
   right: 0;
   left: 0;
   z-index: -10;
+}
+
+.dynamic-shape {
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+  width: 100%;
+  height: 100%;
+  -webkit-transform: translateY(-100%);
+          transform: translateY(-100%);
+  background-color: var(--color-secondary);
+  position: fixed;
+  right: 0;
+  left: 0;
+  z-index: -10;
+}
+
+#h-shape-home {
   -webkit-clip-path: polygon(33% 100%, 63% 100%, 100% 0, 100% 100%, 0 100%, 0 72%);
           clip-path: polygon(33% 100%, 63% 100%, 100% 0, 100% 100%, 0 100%, 0 72%);
 }
@@ -578,7 +643,7 @@ section {
 }
 
 .btn-container {
-  border: 2px solid white;
+  border: 2px solid var(--color-white);
   border-radius: 1.5cm;
   -ms-flex-item-align: end;
       align-self: flex-end;
@@ -595,7 +660,7 @@ section {
   -webkit-box-direction: normal;
       -ms-flex-direction: row;
           flex-direction: row;
-  color: white;
+  color: var(--color-white);
   font-weight: 600;
   -webkit-box-align: center;
       -ms-flex-align: center;

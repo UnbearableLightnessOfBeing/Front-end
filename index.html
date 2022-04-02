@@ -8,6 +8,7 @@
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="/styles/portfolio-styles.css">
     <link rel="stylesheet" href="/styles/blogs-styles.css">
+    <link rel="stylesheet" href="/styles/contacts-styles.css">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
@@ -29,11 +30,14 @@
             <img src="images/Portfolio/AMicon.png" alt="Anti Mage icon"> Portfolio 
         </div>
         <div class="control control-4" data-id="blogs">
-            <i class="fa-solid fa-book"></i> Blogs
+            <img src="images/Blogs/Enigma_icon.png" alt="Enigma icon"></i> Blogs
         </div>
         <div class="control control-5" data-id="contacts"> 
-            <i class="fa-solid fa-envelope-open"></i> Contacts
+            <img src="images/Blogs/Enigma_icon.png" alt="Enigma icon"></i> Contacts
         </div>
+    </div>
+    <div class="theme-btn">
+        <i class="fas fa-adjust"></i>
     </div>
     <main>
         <section class="section sec1 " id="home">
@@ -73,12 +77,10 @@
                     <div class="image home-right-image" >
                         <img src="images/VoidSpirirt.jpg" alt="Templar Assassin">
                     </div>
-                   
                 </div>
-                
             </div>
-            <div class="h-shape"></div>
         </section>
+        <div class="h-shape dynamic-shape home" id="h-shape-home"></div>
         <section class="section sec2 about "id="about">
             <div class="sect-header">
                 <div class="header-left-img" id="home-hdr-left-img">
@@ -340,26 +342,23 @@
                         </div>
                     </div>
                 </div>
-                <div class="h-shape" id="h-shape-portfolio">
-                </div>
-                
-                
         </section>
+        <div class="h-shape dynamic-shape portfolio" id="h-shape-portfolio"></div>
         <div class="portfolio-bottom-right foreground-element portfolio" id="" >
             <img src="images/Portfolio/AMblind.png" alt="AM with a blindband">
         </div>
-        <section class="section sec4 blogs active" id="blogs">
+        <section class="section sec4 blogs " id="blogs">
             <div class="sect-header">
                 <div class="header-left-img" id="home-hdr-left-img">
-                    <img class="image" src="images/astralStep.jpg" alt="Void Spirit ultimate">
+                    <img class="image" src="images/Blogs/BlackHole_icon.jpg" alt="Black Hole">
                 </div>
                 <div class="header-text">
                     <h2>My<span>blogs</span> 
                         <div class="bg-text">My blogs</div>
                     </h2>
                 </div>
-                <div class="header-right-img" id="home-hdr-right-img">
-                    <img src="images/header_void.png" alt="Void Spirit">
+                <div class="header-right-img" id="blogs-hdr-right-img">
+                    <img src="images/Blogs/Enigma.png" alt="Void Spirit">
                 </div>
             </div>
             <div class="blogs-text">
@@ -368,18 +367,188 @@
                 </p>
             </div>
             <div class="blogs-container">
-                <div class="blog-item">
-                    <div class="blog-img">
-                        <img class="blog-img" src="images/Blogs/blog_items/blog2.jpg" alt="blog 1">
+                <div class="blog-item-wrapper">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img class="blog-img" src="images/Blogs/blog_items/blog1.jpg" alt="blog 1">
+                        </div>
+                        <div class="blog-title">
+                            <h3>How to create a site in 1 hour?</h3>
+                            A short description of a blog.
+                        </div>
                     </div>
-                    <div class="blog-title">
-                        <h3>How to create a site in 1 hour?</h3>
-                        Its impossible.
+                </div>
+                <div class="blog-item-wrapper">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img class="blog-img" src="images/Blogs/blog_items/blog2.jpg" alt="blog 1">
+                        </div>
+                        <div class="blog-title">
+                            <h3>How to create a site in 1 hour?</h3>
+                            A short description of a blog.
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-item-wrapper">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img class="blog-img" src="images/Blogs/blog_items/blog3.jpg" alt="blog 1">
+                        </div>
+                        <div class="blog-title">
+                            <h3>How to hack Pentagon?</h3>
+                            A short description of a blog.
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-item-wrapper">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img class="blog-img" src="images/Blogs/blog_items/blog4.jpg" alt="blog 1">
+                        </div>
+                        <div class="blog-title">
+                            <h3>How to build muscles lying on a couch?</h3>
+                            A short description of a blog.
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-item-wrapper">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img class="blog-img" src="images/Blogs/blog_items/blog5.jpg" alt="blog 1">
+                        </div>
+                        <div class="blog-title">
+                            <h3>How to be the coolest guy on the planet?</h3>
+                            A short description of a blog.
+                        </div>
+                    </div>
+                </div>
+                <div class="blog-item-wrapper">
+                    <div class="blog-item">
+                        <div class="blog-img">
+                            <img class="blog-img" src="images/Blogs/blog_items/blog6.jpg" alt="blog 1">
+                        </div>
+                        <div class="blog-title">
+                            <h3>How to stop asking "How to?"?</h3>
+                            A short description of a blog.
+                        </div>
                     </div>
                 </div>
             </div>
         </section>
-        <section class="section sec5 contacts" id="contacts"></section>
+        <div class="h-shape dynamic-shape blogs" id="h-shape-blogs"></div>
+        <section class="section sec5 contacts active" id="contacts">
+            <div class="sect-header">
+                <div class="header-left-img" id="home-hdr-left-img">
+                    <img class="image" src="images/astralStep.jpg" alt="Void Spirit ultimate">
+                </div>
+                <div class="header-text">
+                    <h2><span>Contatct</span> me
+                        <div class="bg-text">Contact info</div>
+                    </h2>
+                </div>
+                <div class="header-right-img" id="home-hdr-right-img">
+                    <img src="images/header_void.png" alt="Void Spirit">
+                </div>
+            </div>
+            <div class="contacts-container">
+                <div class="contacts-left">
+                    <h4>Contact me here</h4>
+                    <p>Lorem Ipsum dolor sit amet consectetur elit.</p>
+                    <div class="contact-info">
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-map-marker-alt"></i>
+                                Location
+                            </div>
+                            <p>: Bryansk, Russian Federation</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-envelope"></i>
+                                <span>Email</span>
+                            </div>
+                            <p>: golomazdinp@gmail.com</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-user-graduate"></i>
+                                Education
+                            </div>
+                            <p>: Bryansk State Technical University</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-user-alt"></i>
+                                Mobile Number
+                            </div>
+                            <p>: +7-953-270-24-73</p>
+                        </div>
+                        <div class="contact-item">
+                            <div class="icon">
+                                <i class="fas fa-globe-africa"></i>
+                                Languages
+                            </div>
+                            <p>: Russian, English</p>
+                        </div>
+                        <div class="contact-icons">
+                            <div class="contact-icon">
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-instagram"></i>
+                                </a>
+                            </div>
+                            <div class="contact-icon">
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-vk"></i>
+                                    <div class="vk icon-background"></div>
+                                </a>
+                            </div>
+                            <div class="contact-icon">
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-github"></i>
+                                    <div class="github icon-background"></div>
+                                </a>
+                            </div>
+                            <div class="contact-icon">
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-youtube"></i>
+                                    <div class="youtube icon-background"></div>
+                                </a>
+                            </div>
+                            <div class="contact-icon">
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-discord"></i>
+                                    <div class="discord icon-background"></div>
+                                </a>
+                            </div>
+                            <div class="contact-icon">
+                                <a href="#" target="_blank">
+                                    <i class="fab fa-telegram"></i>
+                                    <div class="telegream icon-background"></div>
+                                </a>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="contacts-right">
+                    <form action="" class="contact-form">
+                        <div class="input-control input-control-2">
+                            <input type="text" placeholder="Your name">
+                            <input type="text" placeholder="Your e-mail">
+                        </div>
+                        <div class="input-control">
+                            <input type="text" placeholder="Enter subject">
+                        </div>
+                        <div class="input-control">
+                            <textarea name="" id="" cols="30" rows="10" placeholder="Enter your content"></textarea>
+                        </div>
+                        <div class="submit-btn">
+                            <input type="submit" name="submit">
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </section>
+        <div class="h-shape dynamic-shape contacts" id="h-shape-contacts"></div>
     </main>
    
 
