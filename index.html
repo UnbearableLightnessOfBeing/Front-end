@@ -5,6 +5,7 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Portfolio site</title>
+    <link rel="stylesheet" type="text/css" media="screen and (min-device-width: 1100px)" href="/styles/styles.css" />
     <link rel="stylesheet" href="/styles/styles.css">
     <link rel="stylesheet" href="/styles/portfolio-styles.css">
     <link rel="stylesheet" href="/styles/blogs-styles.css">
@@ -21,19 +22,19 @@
     </header> -->
     <div class="controls">
         <div class="control control-1 active-btn" data-id="home">
-            <img src="images/voidIcon.png" alt="Void icon"> Home
+            <img src="images/voidIcon.png" alt="Void icon"> <p>Home</p>
         </div>
         <div class="control control-2 " data-id="about">
-            <img src="images/About/TAicon.png" alt="Void icon"> About
+            <img src="images/About/TAicon.png" alt="Void icon"> <p>About</p>
         </div>
         <div class="control control-3 " data-id="portfolio" data> 
-            <img src="images/Portfolio/AMicon.png" alt="Anti Mage icon"> Portfolio 
+            <img src="images/Portfolio/AMicon.png" alt="Anti Mage icon"> <p>Portfolio</p> 
         </div>
         <div class="control control-4" data-id="blogs">
-            <img src="images/Blogs/Enigma_icon.png" alt="Enigma icon"></i> Blogs
+            <img src="images/Blogs/Enigma_icon.png" alt="Enigma icon"></i> <p>Blogs</p>
         </div>
         <div class="control control-5" data-id="contacts"> 
-            <img src="images/Blogs/Enigma_icon.png" alt="Enigma icon"></i> Contacts
+            <img src="images/contacts/Tbicon.png" alt="Enigma icon"></i> <p>Contacts</p>
         </div>
     </div>
     <div class="theme-btn">
@@ -61,7 +62,7 @@
                         Жажду понять себя можно утолить, лишь беспросветно сбившись с пути.
                         Ведь дорога возникает под шагами идущего. Когда мрак накрывает мысли, когда нет ни одной двери и некуда идти, рождается свет, дающий надежду и одновременно ослепляющий.
                         И нет последнего знания, как нет края вселенной, ибо дойдя до него, открывается путь до нового края. И это справедливо.</p>
-                        <span class="quote">© Mr. Freeman, Meditation №1</span>
+                    <span class="quote">© Mr. Freeman, Meditation №1</span>
                     <div class="btn-container">
                        <a href="https://www.youtube.com/watch?v=cQnobZm9wxw" target="blank" class="link-btn">
                             <span class="text-btn">
@@ -71,6 +72,12 @@
                                 <i class="fa-solid fa-video-camera"></i>
                             </div>
                        </a>
+                    </div>
+                    <div class="home" id="home-foregound-bottom">
+                        <img src="images/home/freeman_1.png" alt="Mr. Freeman">
+                    </div>
+                    <div class="home" id="home-foregound-bottom2">
+                        <img src="images/home/freeman_2.png" alt="Mr. Freeman">
                     </div>
                 </div>
                 <div class="home-right">
@@ -88,7 +95,7 @@
                 </div>
                 <div class="header-text">
                     <h2>About <span>me</span> 
-                        <div class="bg-text">Information</div>
+                        <div class="bg-text" id="information">Information</div>
                     </h2>
                 </div>
                 <div class="header-right-img" id="about-hdr-right-img">
@@ -121,8 +128,8 @@
                     <div class="anime-pointer">
                         <i class="fa-solid fa-circle-arrow-right"></i>
                     </div>
-                    <a href="https://yummyanime.club/users/id694202" target="blank">
-                        <div class="anime-list-link image">
+                    <a class="anime-list-link image" href="https://yummyanime.club/users/id694202" target="blank">
+                        <div class="">
                         <img src="images/About/anmieList.png" alt="">
                     </div></a>
                 </div>
@@ -347,6 +354,9 @@
         <div class="portfolio-bottom-right foreground-element portfolio" id="" >
             <img src="images/Portfolio/AMblind.png" alt="AM with a blindband">
         </div>
+            <div class="foreground-element portfolio" id="portfolio-foregound-left">
+                <img src="images/Portfolio/Am with bashers.png" alt="AM with bashers">
+            </div>
         <section class="section sec4 blogs " id="blogs">
             <div class="sect-header">
                 <div class="header-left-img" id="home-hdr-left-img">
@@ -367,7 +377,10 @@
                 </p>
             </div>
             <div class="blogs-container">
+                
                 <div class="blog-item-wrapper">
+                    <div class="spark-top"></div>
+                    <div class="spark-bottom"></div>
                     <div class="blog-item">
                         <div class="blog-img">
                             <img class="blog-img" src="images/Blogs/blog_items/blog1.jpg" alt="blog 1">
@@ -379,6 +392,8 @@
                     </div>
                 </div>
                 <div class="blog-item-wrapper">
+                    <div class="spark-top"></div>
+                    <div class="spark-bottom"></div>
                     <div class="blog-item">
                         <div class="blog-img">
                             <img class="blog-img" src="images/Blogs/blog_items/blog2.jpg" alt="blog 1">
@@ -390,6 +405,8 @@
                     </div>
                 </div>
                 <div class="blog-item-wrapper">
+                    <div class="spark-top"></div>
+                    <div class="spark-bottom"></div>
                     <div class="blog-item">
                         <div class="blog-img">
                             <img class="blog-img" src="images/Blogs/blog_items/blog3.jpg" alt="blog 1">
@@ -401,6 +418,8 @@
                     </div>
                 </div>
                 <div class="blog-item-wrapper">
+                    <div class="spark-top"></div>
+                    <div class="spark-bottom"></div>
                     <div class="blog-item">
                         <div class="blog-img">
                             <img class="blog-img" src="images/Blogs/blog_items/blog4.jpg" alt="blog 1">
@@ -412,6 +431,8 @@
                     </div>
                 </div>
                 <div class="blog-item-wrapper">
+                    <div class="spark-top"></div>
+                    <div class="spark-bottom"></div>
                     <div class="blog-item">
                         <div class="blog-img">
                             <img class="blog-img" src="images/Blogs/blog_items/blog5.jpg" alt="blog 1">
@@ -423,6 +444,8 @@
                     </div>
                 </div>
                 <div class="blog-item-wrapper">
+                    <div class="spark-top"></div>
+                    <div class="spark-bottom"></div>
                     <div class="blog-item">
                         <div class="blog-img">
                             <img class="blog-img" src="images/Blogs/blog_items/blog6.jpg" alt="blog 1">
@@ -435,19 +458,22 @@
                 </div>
             </div>
         </section>
+        <div class="foreground-element blogs" id="blogs-foregound-left">
+            <img src="images/Blogs/EnigmaForeground_1.png" alt="AM with bashers">
+        </div>
         <div class="h-shape dynamic-shape blogs" id="h-shape-blogs"></div>
         <section class="section sec5 contacts active" id="contacts">
             <div class="sect-header">
                 <div class="header-left-img" id="home-hdr-left-img">
-                    <img class="image" src="images/astralStep.jpg" alt="Void Spirit ultimate">
+                    <img class="image" src="images/contacts/TBmeta.jpg" alt="Void Spirit ultimate">
                 </div>
                 <div class="header-text">
                     <h2><span>Contatct</span> me
                         <div class="bg-text">Contact info</div>
                     </h2>
                 </div>
-                <div class="header-right-img" id="home-hdr-right-img">
-                    <img src="images/header_void.png" alt="Void Spirit">
+                <div class="header-right-img" id="contacts-hdr-right-img">
+                    <img src="images/contacts/TBanime.png" alt="Void Spirit">
                 </div>
             </div>
             <div class="contacts-container">

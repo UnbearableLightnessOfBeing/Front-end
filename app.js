@@ -5,7 +5,8 @@ const mainContent = document.querySelector('.main-content');
 const foregroundElements = document.querySelectorAll('.foreground-element');
 const dynamicBackgrounds= document.querySelectorAll('.dynamic-shape');
 const themeToggleButton = document.querySelector('.theme-btn');
-console.log(dynamicBackgrounds);
+const info = document.getElementById('information');
+
 
 function controlButtonSwitching(){
     for(let i=0; i < controlButtons.length; i++){
@@ -43,7 +44,7 @@ function switchSection(SectionId){
 function switchForeGround(elementId){
     foregroundElements.forEach((element) =>{
         element.classList.remove('active-foreground');
-        if(element.classList[element.classList.length-1] == elementId){
+        if(element.classList.contains(elementId)){
             element.classList.add('active-foreground');
         }
     })
@@ -52,7 +53,7 @@ function switchForeGround(elementId){
 function switchBackground(elementId){
     dynamicBackgrounds.forEach((element) =>{
         element.classList.remove('active-background');
-        if(element.classList[element.classList.length-1] == elementId){
+        if(element.classList.contains(elementId)){
             element.classList.add('active-background');
         }
     })
@@ -65,9 +66,35 @@ function controlThemeToggling(){
     });
 }
 
+function changeResponsiveContetn(){
+    
+    setInfoBackgroundText();
+    changeInfoBackgroundText();
+}
+
+function setInfoBackgroundText(){
+    if(window.innerWidth <= 1000){
+        info.innerText = "info";
+    }
+    else{
+        info.innerText = "information";
+    }
+}
+function changeInfoBackgroundText(){
+    window.addEventListener('resize', () =>{
+        if(window.innerWidth <= 1000){
+            info.innerText = "info";
+        }
+        if(window.innerWidth > 1000){
+            info.innerText = "information";
+        }
+    });
+}
+
 controlButtonSwitching();
 controlActiveElements();
 controlThemeToggling();
+changeResponsiveContetn();
 
 // console.log(document.getElementsByClassName("anime-list-link")[0].get("class"));
 

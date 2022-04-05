@@ -150,12 +150,31 @@
   height: 200px;
   width: 350px;
   z-index: 0;
-  -webkit-transform: translateX(100%);
-          transform: translateX(100%);
+  -webkit-transform: translateX(100%) scaleX(0);
+          transform: translateX(100%) scaleX(0);
   pointer-events: none;
 }
 
 .portfolio-bottom-right img {
+  height: 100%;
+  z-index: 1;
+  -o-object-fit: cover;
+     object-fit: cover;
+}
+
+#portfolio-foregound-left {
+  position: fixed;
+  left: 0;
+  top: 25%;
+  height: 350px;
+  width: 350px;
+  z-index: 0;
+  -webkit-transform: translateX(-100%) scaleX(0);
+          transform: translateX(-100%) scaleX(0);
+  pointer-events: none;
+}
+
+#portfolio-foregound-left img {
   height: 100%;
   z-index: 1;
   -o-object-fit: cover;
@@ -173,10 +192,6 @@
 }
 
 @-webkit-keyframes scaleForegroundAnim {
-  0% {
-    -webkit-transform: translateX(100%) scaleX(0);
-            transform: translateX(100%) scaleX(0);
-  }
   100% {
     -webkit-transform: translateX(0%) scaleX(1);
             transform: translateX(0%) scaleX(1);
@@ -184,42 +199,9 @@
 }
 
 @keyframes scaleForegroundAnim {
-  0% {
-    -webkit-transform: translateX(100%) scaleX(0);
-            transform: translateX(100%) scaleX(0);
-  }
   100% {
     -webkit-transform: translateX(0%) scaleX(1);
             transform: translateX(0%) scaleX(1);
-  }
-}
-
-.active-background {
-  -webkit-animation: scaleBackgroundAnim 0.6s, ease-in-out;
-          animation: scaleBackgroundAnim 0.6s, ease-in-out;
-  -webkit-animation-fill-mode: forwards;
-          animation-fill-mode: forwards;
-}
-
-@-webkit-keyframes scaleBackgroundAnim {
-  0% {
-    -webkit-transform: translateY(-100%) scaleY(0);
-            transform: translateY(-100%) scaleY(0);
-  }
-  100% {
-    -webkit-transform: translateX(0%) scaleY(1);
-            transform: translateX(0%) scaleY(1);
-  }
-}
-
-@keyframes scaleBackgroundAnim {
-  0% {
-    -webkit-transform: translateY(-100%) scaleY(0);
-            transform: translateY(-100%) scaleY(0);
-  }
-  100% {
-    -webkit-transform: translateX(0%) scaleY(1);
-            transform: translateX(0%) scaleY(1);
   }
 }
 /*# sourceMappingURL=portfolio-styles.css.map */
