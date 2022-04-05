@@ -1,7 +1,7 @@
 const controls = document.querySelectorAll('.controls');
-const controlButtons = document.querySelectorAll('.control');
+// const controlButtons = document.querySelectorAll('.control');
 const allSections = document.querySelectorAll('.section');
-const mainContent = document.querySelector('.main-content');
+// const mainContent = document.querySelector('.main-content');
 const foregroundElements = document.querySelectorAll('.foreground-element');
 const dynamicBackgrounds= document.querySelectorAll('.dynamic-shape');
 const themeToggleButton = document.querySelector('.theme-btn');
@@ -9,6 +9,7 @@ const info = document.getElementById('information');
 
 
 function controlButtonSwitching(){
+    let controlButtons= document.querySelectorAll('.control');
     for(let i=0; i < controlButtons.length; i++){
         controlButtons[i].addEventListener('click', function(){
             deactivateButtons();
@@ -23,6 +24,7 @@ function deactivateButtons(){
 }
 
 function controlActiveElements(){
+    let mainContent = document.querySelector('.main-content');
     mainContent.addEventListener('click', (e) => {
         const id = (e.target.dataset.id);
         if(id){
@@ -74,19 +76,19 @@ function changeResponsiveContetn(){
 
 function setInfoBackgroundText(){
     if(window.innerWidth <= 1000){
-        info.innerText = "info";
+        info.innerHTML = "info";
     }
     else{
-        info.innerText = "information";
+        info.innerHTML = "information";
     }
 }
 function changeInfoBackgroundText(){
     window.addEventListener('resize', () =>{
         if(window.innerWidth <= 1000){
-            info.innerText = "info";
+            info.innerHTML = "info";
         }
         if(window.innerWidth > 1000){
-            info.innerText = "information";
+            info.innerHTML = "information";
         }
     });
 }
