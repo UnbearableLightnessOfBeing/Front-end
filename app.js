@@ -26,7 +26,7 @@ function deactivateButtons(){
 function controlActiveElements(){
     let mainContent = document.querySelector('.main-content');
     mainContent.addEventListener('click', (e) => {
-        const id = (e.target.dataset.id);
+        const id = (e.target.closest('div').dataset.id);
         if(id){
             switchSection(id);
             switchForeGround(id);
@@ -93,10 +93,26 @@ function changeInfoBackgroundText(){
     });
 }
 
-controlButtonSwitching();
-controlActiveElements();
-controlThemeToggling();
-changeResponsiveContetn();
+function adjustBackgroundText() {
+    let bgText = document.querySelector('#contacts .bg-text');
+    window.addEventListener('resize', function() {
+        if(this.innerWidth < 600) {
+            bgText.innerText = 'INFO';
+        }else {
+            bgText.innerText = 'CONTACT INFO';
+        }
+    });
+}
 
-// console.log(document.getElementsByClassName("anime-list-link")[0].get("class"));
+window.addEventListener('load', function() {
+
+    adjustBackgroundText();
+    switchBackground('home');
+
+    controlButtonSwitching();
+    controlActiveElements();
+    controlThemeToggling();
+    changeResponsiveContetn();
+
+});
 
